@@ -9,12 +9,14 @@ USE k_12_school;
 -- create the tables for the database
 CREATE TABLE student (
   student_id		INT		PRIMARY KEY,
+  s_password		INT		NOT NULL,
   first_name		VARCHAR(50)		NOT NULL,
   last_name		VARCHAR(50)		NOT NULL
 );
 
 CREATE TABLE teacher (
   teacher_id		INT		PRIMARY KEY,
+  t_password		INT		NOT NULL,
   first_name		VARCHAR(50)		NOT NULL,
   last_name		VARCHAR(50)		NOT NULL
 );
@@ -33,23 +35,23 @@ CREATE TABLE enrolls_in (
 );
 
 -- Insert data into the tables
-INSERT INTO student(student_id, first_name, last_name) VALUES
-(101, 'Jesus', 'Arredondo'),
-(102, 'Semeredin', 'Hamza'),
-(103, 'Reginald', 'Peoples'),
-(104, 'Peter', 'Smith'),
-(105, 'Emily', 'Clark'),
-(106, 'Joseph', 'Penrod'),
-(107, 'Samuel', 'Cooke'),
-(108, 'Ketty', 'Howard'),
-(109, 'Lada', 'Rolle'),
-(110, 'Jessica', 'Watson');
+INSERT INTO student(student_id, first_name, last_name, s_password) VALUES
+(101, 'Jesus', 'Arredondo', 1101),
+(102, 'Semeredin', 'Hamza', 1102),
+(103, 'Reginald', 'Peoples', 1103),
+(104, 'Peter', 'Smith', 1104),
+(105, 'Emily', 'Clark', 1105),
+(106, 'Joseph', 'Penrod', 1106),
+(107, 'Samuel', 'Cooke', 1107),
+(108, 'Ketty', 'Howard', 1108),
+(109, 'Lada', 'Rolle', 1109),
+(110, 'Jessica', 'Watson', 1110);
 
-INSERT INTO teacher(teacher_id, first_name, last_name) VALUES
-(1, 'Barack', 'Obama'),
-(2, 'Michelle', 'Obama'),
-(3, 'Malia', 'Obama'),
-(4, 'Sasha', 'Obama');
+INSERT INTO teacher(teacher_id, first_name, last_name, t_password) VALUES
+(1, 'Barack', 'Obama', 1001),
+(2, 'Michelle', 'Obama', 1002),
+(3, 'Malia', 'Obama', 1003),
+(4, 'Sasha', 'Obama', 1004);
 
 INSERT INTO course(course_id, teacher_id, course_name) VALUES
 (1, 2, 'Algebra'),
