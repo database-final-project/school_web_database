@@ -7,19 +7,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   </head>
   <body>
-<?php
-  if (isset($_SESSION["success"])  ){
-      echo ('<p style = "color:green" > ' .$_SESSION ["success"]. "</p>\n");
-      unset($_SESSION["success"]);
-  }
-  // check if we are logged in!
-  if ( !isset($_SESSION["account"]))  { ?>
-    <p> Please <a href="login.php"> Log In </a> to start.</p>
-  <?php } else { ?>
-     <p>This is where a cool app would be.</p>
-     <p>Please <a href="logout.php"> Log out </a> when you are done.</p>
-  <?php} ?>
-  }
 
     <div class="studentProfile">
       <div class="profileImg"> </div>
@@ -48,7 +35,7 @@
           </li>
 
           <li class="item">
-            <a class="btn" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            <a class="btn" href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
             </div>
           </li>
 
