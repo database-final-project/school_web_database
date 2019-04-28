@@ -29,7 +29,7 @@
         $_SESSION["student_id"] = $_POST["account"];
 		$_SESSION["first_name"] = $row['first_name'];
 		$_SESSION["last_name"] = $row['last_name'];
-        $_SESSION["success"] = "Logged in.";
+        $_SESSION["success"] = "Logged in.";		
         header('Location: student-portal.php' ) ;
         return;
       } else {
@@ -38,6 +38,8 @@
         return;
       }
   }
+  
+  $db->close();
  ?>
 <html lang="en" dir="ltr">
 <head>
