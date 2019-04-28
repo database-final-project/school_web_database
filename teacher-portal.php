@@ -25,7 +25,7 @@
           <li class="item" id='student'>
             <a href="#student" class="btn"><i class="fas fa-book-open"></i> Classroom Information </a>
             <div class="smenu">
-              <a href="#"> View Schedule </a>
+              <a href="teacherSchedule.php" target="_blank"> View Schedule </a>
               <a href="#"> Update Student Attendance </a>
               <a href="updateGrade.php" target="_blank"> Update Student Grade  </a>
             </div>
