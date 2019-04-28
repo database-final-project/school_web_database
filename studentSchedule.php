@@ -9,7 +9,7 @@
 
       <table>
         <tr>
-          <th> Student Class </th>
+          <th> Class Name </th>
           <th> Class Time </th>
         </tr>
       </table>
@@ -32,9 +32,9 @@
 
     $query = "SELECT course_name, course_schedule
               FROM course c
-              join enrolls_in ei on c.course_id = ei.course_id
-              join student s on ei.student_id = s.student_id
-              where s.student_id " = .$student_id;
+              JOIN enrolls_in ei ON c.course_id = ei.course_id
+              JOIN student s ON ei.student_id = s.student_id
+              WHERE s.student_id = " .$student_id;
 
     $result = $db->query($query);
     $num_results = $result->num_rows;
