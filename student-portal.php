@@ -12,7 +12,6 @@
       <div class="profileImg"> </div>
       <h1> Student Name </h1>
       <h1> Student Id </h1>
-      <h1> Current Year </h1>
     </div>
 
       <div class="middle">
