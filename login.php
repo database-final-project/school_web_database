@@ -19,20 +19,31 @@
 		$password = addslashes($password);
 	  }
 	  
-	  $query = "SELECT * FROM student where student_id = ".$username." AND s_password = ".$password;
+	  $s_query = "SELECT * FROM student WHERE student_id = ".$username." AND s_password = ".$password;
+	  $t_query = "SELECT * FROM teacher WHERE teacher_id = ".$username." AND t_password = ".$password;
 	  
-	  $result = $db->query($query);
-	  $num_results = $result->num_rows;
+	  $s_result = $db->query($s_query);
+	  $s_num_results = $s_result->num_rows;
+	  $t_result = $db->query($t_query);
+	  $t_num_results = $t_result->num_rows;
 	
-      if ($num_results == 1) {
-		$row = $result->fetch_assoc();
+      if ($s_num_results == 1) {
+		$s_row = $s_result->fetch_assoc();
         $_SESSION["student_id"] = $_POST["account"];
-		$_SESSION["first_name"] = $row['first_name'];
-		$_SESSION["last_name"] = $row['last_name'];
+		$_SESSION["first_name"] = $s_row['first_name'];
+		$_SESSION["last_name"] = $s_row['last_name'];
         $_SESSION["success"] = "Logged in.";		
         header('Location: student-portal.php' ) ;
         return;
-      } else {
+      } else if ($t_num_results == 1) {
+		$t_row = $t_result->fetch_assoc();
+        $_SESSION["teacher_id"] = $_POST["account"];
+		$_SESSION["first_name"] = $t_row['first_name'];
+		$_SESSION["last_name"] = $t_row['last_name'];
+        $_SESSION["success"] = "Logged in.";		
+        header('Location: teacher-portal.php' ) ;
+        return;
+	  } else {
         $_SESSION["error"] = "Incorrect username and/or password.";
         header( 'Location: login.php') ;
         return;

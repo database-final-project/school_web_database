@@ -13,7 +13,7 @@
 	  <?php
 	    session_start();
 	  
-		if (isset($_SESSION["student_id"]) ) {
+		if (isset($_SESSION["first_name"]) ) {
 			echo "<h1> " .$_SESSION ["first_name"]. " " .$_SESSION["last_name"]. " </h1>
 			      <h1>" .$_SESSION["student_id"]. "</h1>";
 		}      
