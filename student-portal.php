@@ -25,7 +25,7 @@
           <li class="item" id='student'>
             <a href="#student" class="btn"><i class="fas fa-book-open"></i> Student Class </a>
             <div class="smenu">
-              <a href="#"> Class Schedule</a>
+              <a href="studentSchedule.php" target="_blank"> Class Schedule</a>
               <a href="#"> Class Attendance </a>
               <a href="studentGrades.php" target="_blank"> Class Grade </a>
             </div>
