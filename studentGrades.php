@@ -7,7 +7,7 @@
   </head>
   <body>
 
-      <table>
+      <table id="studentGrades">
         <tr>
           <th> Student Class </th>
           <th> Letter Grade </th>
@@ -23,9 +23,9 @@
        echo 'Error: Could not connect to database.  Please try again later.';
        exit;
     }
-	
+
 	$student_id = $_SESSION["student_id"];
-	
+
 	if (!get_magic_quotes_gpc()){
 		$student_id = addslashes($student_id);
 	  }
@@ -38,20 +38,20 @@
 
     $result = $db->query($query);
     $num_results = $result->num_rows;
-	
+
     if ($num_results > 0) {
 	  echo "<table>";
-	  
+
 	  while ($row = $result-> fetch_assoc() ) {
         echo "<tr><td>". $row["course_name"]. "</td><td>". $row["grade"]. "</td></tr>";
         }
-		
+
       echo "</table>";
     }
      else {
       echo "0 results";
     }
-	
+
     $db->close();
     ?>
 

@@ -1,0 +1,39 @@
+body{
+  font-family: sans-serif;
+  background-image: url(https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1104&q=80s);
+  background-size: 100%;
+}
+
+.studentGrades {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.studentGrades td, .studentGrades th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.studentGrades tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+.studentGrades tr:hover {
+  background-color: #ddd;
+}
+
+.studentGrades th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.studentGrades th:hover {
+	background-color: #3498db;
+}
