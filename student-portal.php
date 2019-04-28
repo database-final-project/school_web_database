@@ -22,7 +22,7 @@
             <div class="smenu">
               <a href="#"> Class Schedule</a>
               <a href="#"> Class Attendance </a>
-              <a href="#"> Class Grade </a>
+              <a href="studentGrades.php" target="_blank"> Class Grade </a>
             </div>
           </li>
 
