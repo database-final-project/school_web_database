@@ -10,8 +10,14 @@
 
     <div class="studentProfile">
       <div class="profileImg"> </div>
-      <h1> Teacher Name  </h1>
-      <h1> teacher Id  </h1>
+      <?php
+	    session_start();
+	  
+		if (isset($_SESSION["first_name"]) ) {
+			echo "<h1> " .$_SESSION ["first_name"]. " " .$_SESSION["last_name"]. " </h1>
+			      <h1>" .$_SESSION["teacher_id"]. "</h1>";
+		}      
+	  ?>
     </div>
 
       <div class="middle">
