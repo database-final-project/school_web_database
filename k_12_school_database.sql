@@ -53,13 +53,13 @@ INSERT INTO teacher(teacher_id, first_name, last_name, t_password) VALUES
 ('3', 'Malia', 'Obama', '1003'),
 ('4', 'Sasha', 'Obama', '1004');
 
-INSERT INTO course(course_id, teacher_id, course_name) VALUES
-('1', '2', 'Algebra'),
-('2', '2', 'Precalculus'),
-('3','1', 'American Literature'),
-('4', '1', 'World Literature'),
-('5','3', 'Inorganic Chemistry'),
-('6', '4', 'Environmental Science');
+INSERT INTO course(course_id, teacher_id, course_name,course_schedule) VALUES
+('1', '2', 'Algebra','7:30 - 8:45'),
+('2', '2', 'Precalculus','8:50 - 10:05'),
+('3','1', 'American Literature','10:10 - 11:25'),
+('4', '1', 'World Literature','12:30 - 1:45'),
+('5','3', 'Inorganic Chemistry','1:50- 2:05'),
+('6', '4', 'Environmental Science','2:10 - 2:25');
 
 INSERT INTO enrolls_in(student_id, course_id, grade) VALUES
 ('101', '1', 'A'), ('101', '3', 'B+'), ('101', '5', 'A'), ('101', '6', 'A'),
