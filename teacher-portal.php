@@ -12,11 +12,11 @@
       <div class="profileImg"> </div>
       <?php
 	    session_start();
-	  
+
 		if (isset($_SESSION["first_name"]) ) {
 			echo "<h1> " .$_SESSION ["first_name"]. " " .$_SESSION["last_name"]. " </h1>
 			      <h1>" .$_SESSION["teacher_id"]. "</h1>";
-		}      
+		}
 	  ?>
     </div>
 
@@ -27,7 +27,7 @@
             <div class="smenu">
               <a href="#"> View Schedule </a>
               <a href="#"> Update Student Attendance </a>
-              <a href="#"> Update Student Grade  </a>
+              <a href="updateGrade.php" target="_blank"> Update Student Grade  </a>
             </div>
           </li>
 
