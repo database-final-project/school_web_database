@@ -8,29 +8,29 @@ USE k_12_school;
 
 -- create the tables for the database
 CREATE TABLE student (
-  student_id		INT		PRIMARY KEY,
-  s_password		INT		NOT NULL,
+  student_id		VARCHAR(10)		PRIMARY KEY,
+  s_password		VARCHAR(10)			NOT NULL,
   first_name		VARCHAR(50)		NOT NULL,
   last_name		VARCHAR(50)		NOT NULL
 );
 
 CREATE TABLE teacher (
-  teacher_id		INT		PRIMARY KEY,
-  t_password		INT		NOT NULL,
+  teacher_id		VARCHAR(10)			PRIMARY KEY,
+  t_password		VARCHAR(10)			NOT NULL,
   first_name		VARCHAR(50)		NOT NULL,
   last_name		VARCHAR(50)		NOT NULL
 );
 
 CREATE TABLE course (
-  course_id		INT		PRIMARY KEY,
-  teacher_id	INT		NOT NULL,
+  course_id		VARCHAR(10)			PRIMARY KEY,
+  teacher_id	VARCHAR(10)			NOT NULL,
   course_name	VARCHAR(50)		NOT NULL,
   course_schedule	VARCHAR(250)	DEFAULT NULL
 );
 
 CREATE TABLE enrolls_in (
-	student_id		INT,
-    course_id		INT,
+	student_id		VARCHAR(10)	,
+    course_id		VARCHAR(10)	,
     grade		VARCHAR(2)		DEFAULT NULL
 );
 
