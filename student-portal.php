@@ -12,11 +12,11 @@
       <div class="profileImg"> </div>
 	  <?php
 	    session_start();
-	  
+
 		if (isset($_SESSION["first_name"]) ) {
 			echo "<h1> " .$_SESSION ["first_name"]. " " .$_SESSION["last_name"]. " </h1>
 			      <h1>" .$_SESSION["student_id"]. "</h1>";
-		}      
+		}
 	  ?>
     </div>
 
@@ -34,6 +34,7 @@
           <li class="item" id = 'mealplan'>
             <a href="#mealplan" class="btn"><i class="fas fa-apple-alt"></i> Meal Plan</a>
             <div class="smenu">
+              <a href="cafeteriaMenu.php" target="_blank">View Cafeteria Menu </a>
               <a href="#">View Current Meal Plan</a>
               <a href="#">New Meal Plan</a>
             </div>
