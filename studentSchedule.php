@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title> Student Grades </title>
-    <link rel="stylesheet" href="style-studentGrades.css">
+    <link rel="stylesheet" href="style-studentSchedule.css">
   </head>
   <body>
-
-      <table>
+  <div class="box">
+      <table class = "studentSchedule">
         <tr>
           <th> Class Name </th>
           <th> Class Time </th>
@@ -40,7 +40,7 @@
     $num_results = $result->num_rows;
 
     if ($num_results > 0) {
-	  echo "<table>";
+	  echo "<table class= 'studentSchedule'>";
 
 	  while ($row = $result-> fetch_assoc() ) {
         echo "<tr><td>". $row["course_name"]. "</td><td>". $row["course_schedule"]. "</td></tr>";
@@ -54,7 +54,6 @@
 
     $db->close();
     ?>
-
-
+</div>
   </body>
 </html>
