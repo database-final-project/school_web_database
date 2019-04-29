@@ -13,7 +13,7 @@
           <th> Breakfast </th>
           <th> Lunch </th>
         </tr>
-      </table>
+      
 
     <?php
 	session_start();
@@ -87,7 +87,7 @@
     $row_fb = $result_fb->fetch_assoc();
     $row_fl = $result_fl->fetch_assoc();
 
-	  echo "<table class= 'cafeteriaMenu'>";
+	 
 
     echo "<tr><td> Monday </td><td>". $row_mb["food_name"]. "</td><td>". $row_ml["food_name"]. "</td></tr>";
     echo "<tr><td> Tuesday </td><td>". $row_tb["food_name"]. "</td><td>". $row_tl["food_name"]. "</td></tr>";
