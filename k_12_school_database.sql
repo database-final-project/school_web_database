@@ -85,9 +85,9 @@ INSERT INTO food_served (food_served_id, day_name, food_type, food_name) VALUES
 ('2','Monday','lunch','pasta, burrito, tacos'),
 ('3','Tuesday','breakfast','eggs, bacon, smoothie'),
 ('4','Tuesday','lunch','salad, soup, pizza'),
-('5','Wednesday','breakfast','French-Toast, pancakes, smoothie '),
-('6','Wednesday','lunch','Fried chicken, mac and cheese'),
-('7','Thursday','breakfast','eggs, Hashbrown, smoothie '),
-('8','Thursday','lunch','Pizza, hamburgers, fries'),
-('9','Friday','breakfast','Muffin, Waffles, smoothie '),
-('10','Friday','lunch','Fried fish, baked fish, grits');
+('5','Wednesday','breakfast','French-toast, pancakes, smoothie '),
+('6','Wednesday','lunch','fried chicken, mac and cheese'),
+('7','Thursday','breakfast','eggs, hashbrown, smoothie '),
+('8','Thursday','lunch','pizza, hamburgers, fries'),
+('9','Friday','breakfast','muffin, waffles, smoothie '),
+('10','Friday','lunch','fried fish, baked fish, grits');
