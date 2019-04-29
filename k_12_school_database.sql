@@ -34,6 +34,17 @@ CREATE TABLE enrolls_in (
     grade		VARCHAR(2)		DEFAULT NULL
 );
 
+CREATE TABLE food_served (
+  food_id       VARCHAR (10)     PRIMARY KEY,
+  day_name      VARCHAR (10)      NOT NULL,
+  type          VARCHAR (10)      NOT NULL,
+  food_name     VARCHAR (50)     NOT NULL
+);
+
+
+
+
+
 -- Insert data into the tables
 INSERT INTO student(student_id, first_name, last_name, s_password) VALUES
 ('101', 'Jesus', 'Arredondo', '1101'),
@@ -72,3 +83,15 @@ INSERT INTO enrolls_in(student_id, course_id, grade) VALUES
 ('108', '2', 'B'), ('108', '4', 'C'), ('108', '5', 'A'), ('108', '6', 'A'),
 ('109', '2', 'A'), ('109', '4', 'B'), ('109', '5', 'A'), ('109', '6', 'A'),
 ('110', '2', 'A'), ('110','4', 'A'), ('110', '5', 'A-'), ('110', '6', 'A');
+
+INSERT INTO food_served (food_served_id, day_name, type, food_name) VALUES
+('1','Monday','breakfast','eggs, pancakes, smoothie '),
+('2','Monday','lunch','pasta, burrito, tacos'),
+('3','Tuesday','breakfast','eggs, bacon, smoothie'),
+('4','Tuesday','lunch','salad, soup, pizza'),
+('5','Wednesday','breakfast','French-Toast, pancakes, smoothie '),
+('6','Wednesday','lunch','Fried chicken, mac and cheese'),
+('7','Thursday','breakfast','eggs, Hashbrown, smoothie '),
+('8','Thursday','lunch','Pizza, hamburgers, fries'),
+('9','Friday','breakfast','Muffin, Waffles, smoothie '),
+('10','Friday','lunch','Fried fish, baked fish, grits'); 
