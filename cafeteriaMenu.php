@@ -10,7 +10,7 @@
       <table class = "cafeteriaMenu">
         <tr>
           <th> Day of the Week </th>
-          <th> breakfast </th>
+          <th> Breakfast </th>
           <th> Lunch </th>
         </tr>
       </table>
@@ -76,16 +76,16 @@
     $result_fb = $db->query($query_fb);
     $result_fl = $db->query($query_fl);
 
-    $row_mb = $result_mb-> fetch_assoc();
-    $row_ml = $result_ml-> fetch_assoc();
-    $row_tb = $resul_tb-> fetch_assoc();
-    $row_tl = $result_tl-> fetch_assoc();
-    $row_wb = $result_wb-> fetch_assoc();
-    $row_wl = $result_wl> fetch_assoc();
-    $row_thb = $result_thb-> fetch_assoc();
-    $row_thl = $result_thl-> fetch_assoc();
-    $row_fb = $result_fb-> fetch_assoc();
-    $row_fl = $result_fl-> fetch_assoc();
+    $row_mb = $result_mb->fetch_assoc();
+    $row_ml = $result_ml->fetch_assoc();
+    $row_tb = $result_tb->fetch_assoc();
+    $row_tl = $result_tl->fetch_assoc();
+    $row_wb = $result_wb->fetch_assoc();
+    $row_wl = $result_wl->fetch_assoc();
+    $row_thb = $result_thb->fetch_assoc();
+    $row_thl = $result_thl->fetch_assoc();
+    $row_fb = $result_fb->fetch_assoc();
+    $row_fl = $result_fl->fetch_assoc();
 
 	  echo "<table class= 'cafeteriaMenu'>";
 
