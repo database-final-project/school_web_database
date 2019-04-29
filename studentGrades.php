@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="style-studentGrades.css">
   </head>
   <body>
-
-      <table id="studentGrades">
+  <div class = "box">
+      <table class="studentGrades" style = "padding:10px;">
         <tr>
           <th> Student Class </th>
           <th> Letter Grade </th>
@@ -40,7 +40,7 @@
     $num_results = $result->num_rows;
 
     if ($num_results > 0) {
-	  echo "<table>";
+	  echo "<table class = 'studentGrades'>";
 
 	  while ($row = $result-> fetch_assoc() ) {
         echo "<tr><td>". $row["course_name"]. "</td><td>". $row["grade"]. "</td></tr>";
@@ -54,7 +54,6 @@
 
     $db->close();
     ?>
-
-
+</div>
   </body>
 </html>
