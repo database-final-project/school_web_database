@@ -3,11 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title> Student Grades </title>
-    <link rel="stylesheet" href="style-studentGrades.css">
+    <link rel="stylesheet" href="style-teacherSchedule.css">
   </head>
   <body>
+  <div class="box">
 
-      <table>
+      <table class = "teacherSchedule">
         <tr>
           <th> Class Name </th>
           <th> Class Time </th>
@@ -31,14 +32,14 @@
 	  }
 
     $query = "SELECT course_name, course_schedule
-              FROM course 
+              FROM course
               WHERE teacher_id = " .$teacher_id;
 
     $result = $db->query($query);
     $num_results = $result->num_rows;
 
     if ($num_results > 0) {
-	  echo "<table>";
+	  echo "<table class = 'teacherSchedule'>";
 
 	  while ($row = $result-> fetch_assoc() ) {
         echo "<tr><td>". $row["course_name"]. "</td><td>". $row["course_schedule"]. "</td></tr>";
@@ -52,7 +53,6 @@
 
     $db->close();
     ?>
-
-
+  </div>
   </body>
 </html>
