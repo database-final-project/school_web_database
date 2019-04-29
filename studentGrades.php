@@ -7,7 +7,7 @@
   </head>
   <body>
   <div class = "box">
-      <table class="studentGrades" style = "padding:10px;">
+      <table class="studentGrades">
         <tr>
           <th> Student Class </th>
           <th> Letter Grade </th>
