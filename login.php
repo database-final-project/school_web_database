@@ -60,7 +60,14 @@
 </head>
 
 <body>
-<?php
+
+
+<form class="box" method="post">
+    <h1>Portal - Login</h1>
+    <p><input type="text" name="account"  placeholder="Username" value=""></p>
+    <p><input type="password" name="pw"  placeholder="Password" value=""></p>
+	
+	<?php
  if (isset($_SESSION["error"]) ) {
     echo ('<p style = "color:red">' .$_SESSION ["error"]. "</p>\n" );
     unset ($_SESSION["error"]);
@@ -71,11 +78,6 @@
  }
 
  ?>
-
-<form class="box" method="post">
-    <h1>Portal - Login</h1>
-    <p><input type="text" name="account"  placeholder="Username" value=""></p>
-    <p><input type="password" name="pw"  placeholder="Password" value=""></p>
 
     <p><input type="submit" value="Log In">
     </p>
