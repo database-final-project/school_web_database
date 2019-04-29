@@ -12,7 +12,6 @@
           <th> Student Class </th>
           <th> Letter Grade </th>
         </tr>
-      </table>
 
     <?php
 	session_start();
@@ -40,7 +39,6 @@
     $num_results = $result->num_rows;
 
     if ($num_results > 0) {
-	  echo "<table class = 'studentGrades'>";
 
 	  while ($row = $result-> fetch_assoc() ) {
         echo "<tr><td>". $row["course_name"]. "</td><td>". $row["grade"]. "</td></tr>";
